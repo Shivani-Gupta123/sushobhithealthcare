@@ -1931,20 +1931,17 @@ div#client_tb {
     margin-top: 6px;
 }
 
-section.why-choose {
-  background: url('../img/bg.png');
+/* section.why-choose {
+  background: url('../img/mission.jpg');
     margin: 20px 0 0;
     padding: 20px 0 0;
     position: relative;
-}
+} */
 .co-bg {
     position: absolute;
     right: -31px;
     bottom: 0;
     z-index: -1;
-}
-.qualityPage{
-/*    background: url('../img/quality-bg1.jpg');*/
 }
 .qualityBg {
     position: absolute;
