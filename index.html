@@ -32,6 +32,10 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,500i,700" rel="stylesheet">
     <link href="fancybox/jquery.fancybox.css" rel="stylesheet" />
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
         /* WhatsApp button CSS */
         .whatsapp-button {
@@ -53,6 +57,36 @@
         .whatsapp-button:hover {
             transform: scale(1.1); /* Zoom effect on hover */
             background-color: #20b857; /* Slightly darker green on hover */
+        }
+
+        .dropdown-menu img {
+            max-width: 100%;
+            height: auto;
+        }
+        .navbar-toggler {
+            background-color: white; /* Customize the button style */
+        }
+        .dropdown-menu ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .dropdown-menu ul li {
+            padding: 5px 0;
+        }
+
+        @media(max-width:786px){
+           .logo{
+            text-align: center;
+           } 
+           .top-email{
+            margin-right: 40px;
+           }
+           .products{
+            margin-left: -70px;
+           }
+           .caps{
+            margin-left: -140px;
+           }
         }
     </style>
 
@@ -92,9 +126,9 @@
                         </ul>
                     </div>
 
-                    <nav class="navbar navbar-expand-md ">
+                    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light ">
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <button style="background-color: white; color: black;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -121,6 +155,7 @@
                                                     <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Mission.html"> Mission & Vision </a></li>
                                                     <li><i class="fa fa-hand-o-right" aria-hidden="true"></i>  <a href="Certification.html"> Certification   </a></li>
                                                     <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Team.html"> Team  </a></li>
+                                                    <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Team.html"> Our Presence  </a></li>
 
                                                 </ul>
                                             </div>
@@ -203,6 +238,112 @@
 
                             </ul>
                         </div>
+                    </nav> -->
+                
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                
+                            
+                            <!-- Toggler/collapsible Button -->
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                
+                            <!-- Navbar links -->
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul class="navbar-nav ms-auto">
+                                    <!-- Home Link -->
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="index.html">Home</a>
+                                    </li>
+                
+                                    <!-- About Us Dropdown -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            About Us
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <ul>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Profile.html"> Profile</a></li>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Mission.html"> Mission & Vision</a></li>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Certification.html"> Certification</a></li>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Team.html"> Team</a></li>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Presence.html"> Our Presence</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <img src="img/menu/abt.png" alt="About Image">
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                
+                                    <!-- Product Dropdown -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Product
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <img src="img/product/pharma.jpg" alt="Product Image">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h3>Our Products</h3>
+                                                        <div class="row">
+                                                            <div class="col-md-4"><i class="fa fa-hand-o-right"></i> <a href="Product/1.html">Tablet Section</a></div>
+                                                            <div class="col-md-4"><i class="fa fa-hand-o-right"></i> <a href="Product/2.html">Capsule Section</a></div>
+                                                            <div class="col-md-4"><i class="fa fa-hand-o-right"></i> <a href="Product/3.html">Liquid Injection</a></div>
+                                                            <!-- Add more product sections here -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                
+                                    <!-- Facilities Dropdown -->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="facilitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Facilities
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="facilitiesDropdown">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <ul>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Research.html">Research & Development</a></li>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Contract_Manufacturing.html">Contract Manufacturing</a></li>
+                                                        <li><i class="fa fa-hand-o-right"></i> <a href="Plant.html">Plant & Capacities</a></li>
+                                                        <!-- Add more facilities here -->
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <img src="img/menu3.jpg" alt="Facilities Image">
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                
+                                    <!-- Gallery Link -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Gallery.html">Gallery</a>
+                                    </li>
+                
+                                    <!-- Careers Link -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Careers.html">Careers</a>
+                                    </li>
+                
+                                    <!-- Contact Us Link -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="Contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </nav>
                 </div>
 
@@ -277,14 +418,14 @@
 <section class="series">
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-10 products">
                 <div class="heading center p_head">
                     <h1 class="wow zoomIn animated animated animated animated" style="visibility: visible; animation-name: zoomIn;">Our Product  <span>  Range </span> </h1>
                     <div class="bottom-border"></div>
                 </div>
                 <p class="des2 center p_des"> Sushobhit Health Care Pvt. Ltd. is leading  manufacturers  of Bulk Drugs & Drugs  Intermediates in India.</p>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 caps">
                 <div class=" floating2 " style="float: right">
                     <img style="position: relative;left: 55px;bottom: 20px;" src="img/f1.png">
                 </div>

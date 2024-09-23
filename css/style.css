@@ -863,9 +863,9 @@ list-style: none;
 }
 .dropdown-menu ul li {
     list-style: none;
-    padding: 10px;
-    border-bottom: 1px solid #e2dddd;
-    display: block;
+    padding: 1px;
+    border-bottom: 1px solid #100f0f;
+    display: flex;
     cursor: pointer;
     position: relative;
     padding-left: 18px;
