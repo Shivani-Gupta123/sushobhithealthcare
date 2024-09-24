@@ -10225,28 +10225,18 @@
 /* Mobile View */
 @media (max-width: 768px) {
     .about-drop {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 10px;
-    }
-
-    .dropdown-content {
-        flex-direction: column; /* Stack content vertically on mobile */
+        width: auto; /* Width auto on mobile */
+        padding: 40px; /* Add some padding */
     }
 
     .dropdown-image {
-        display: none; /* Hide the image on mobile view */
+        display: none; /* Hide image on mobile view */
     }
 
-    .about-drop ul li a {
-        font-size: 14px;
+    .nav-item{
+        padding: 5px 0px;
     }
 
-    .about-drop ul li {
-        padding: 6px 0;
-    }
 }
 
 /* General styles for the dropdown */
@@ -10352,6 +10342,204 @@ hr {
 
     
     <!--new-->
+    <header class="header" id="myHeader">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <a href="index.html"><img style="height: 100px;" src="img/Screenshot_2024-09-18_142236-removebg-preview.png"></a>
+                        <h4 style="margin-top: -2px;">Sushobhit Health Care Pvt. Ltd.</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 p-r-0">
+
+                    <div class="top-contactInfo">
+                        <ul>
+                            <li>
+                                <div class="top-email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg>
+                                     sushobhithealthcare@gmail.com
+
+                                     <!-- <div class="ftr-follow">
+                                        <div class="follow-icons">
+                                            <ul style="">
+                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100070938878829&mibextid=LQQJ4d "><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/sushobhithealthcare?igsh=MXFjMXBzdzQyemIwbQ%3D%3D&utm_source=qr "><i class="fa fa-instagram"></i></a></li>
+                            <li>
+                                <!-- <div class="top-email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg>+919569619158
+                                </div> -->
+                            </li>
+                        </ul>
+                    </div>
+                
+
+
+                    <nav class="navbar navbar-expand-lg navbar-light">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+
+                            <ul class="navbar-nav">
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="index.html"> Home </a>
+                                </li>
+
+
+
+                                <li class="nav-item dropdown" onmouseleave="about_leave()">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" onmouseover="about_hover()" id="about-menu">
+                                        About Us
+                                    </a>
+                                    <div class="about-drop" style="display: none;" id="about-drop">
+                                        <div class="dropdown-content">
+                                            <!-- List of Links -->
+                                            <ul>
+                                                <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i>  <a href="Profile.html"> Profile </a></li>
+                                                <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Mission.html"> Mission & Vision </a></li>
+                                                <li><i class="fa fa-hand-o-right" aria-hidden="true"></i>  <a href="Certification.html"> Certification </a></li>
+                                                <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Team.html"> Team </a></li>
+                                                <li> <i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Presence.html"> Our Presence </a></li>
+                                            </ul>
+                                
+                                            <!-- Image for desktop view -->
+                                            <div class="dropdown-image">
+                                                <img src="img/product/pharma.jpg" alt="About Us Image" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                               
+
+                                <li class="nav-item dropdown" onmouseleave="product_leave()">
+                                    <a class="nav-link " href="#" data-toggle="dropdown" onmouseover="product_hover()">
+                                        Product
+                                    </a>
+                                    <div class="product-drop" style="display: none; " id="product-drop" >
+                                        <h3>Our Products</h3>
+                                        <div class="dropdown-content">
+                                            
+                                            <div class="row">
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/1.html">TABLET SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/2.html">CAPSULE SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/3.html">LIQUID INJECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/4.html">SYRUP SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/5.html">DRY SYRUP SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/6.html">DENTAL SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/7.html">HERBAL SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/8.html">EYE/EAR/NASAL DROPS </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/9.html">SKINCARE DIVISION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/10.html">LOTION SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/17.html">ENT SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/18.html">OPHTHALMIC SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/11.html">CREAM/GEL/ONT </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/12.html">DUSTING POWDER </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/13.html">SOAP SECTION </a></div>
+                                                <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/14.html">VETERINARY DIVISION </a></div>
+
+                                            </div>
+                                            <div class="product-image">
+                                                <img style="height: 200px; width: 400px;" src="img/product/pharma.jpg" alt="Product Image" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="dropdown-menu drop-down-menu">
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-4"><img src="img/product/pharma.jpg">   </div>
+                                                <div class="col-md-8  proDropBox">
+                                                    <h3>Our Products</h3>
+                                                    <div class="row">
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/1.html">TABLET SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/2.html">CAPSULE SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/3.html">LIQUID INJECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/4.html">SYRUP SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/5.html">DRY SYRUP SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/6.html">DENTAL SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/7.html">HERBAL SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/8.html">EYE/EAR/NASAL DROPS </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/9.html">SKINCARE DIVISION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/10.html">LOTION SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/17.html">ENT SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/18.html">OPHTHALMIC SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/11.html">CREAM/GEL/ONT </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/12.html">DUSTING POWDER </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/13.html">SOAP SECTION </a></div>
+                                                        <div class="col-md-4"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Product/14.html">VETERINARY DIVISION </a></div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </li>
+
+
+                                <li class="nav-item dropdown" onmouseleave="facilities_leave()">
+                                    <a class="nav-link " href="#" data-toggle="dropdown" onmouseover="facilities_hover()">
+                                        Facilities
+                                    </a>
+                                    <div class="facilities-drop" style="display: none;" id="facilities-drop">
+                                        <div class="dropdown-content">
+                                            <!-- List of Links -->
+                                            <ul>
+                                                <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Research.html"> Research & Development </a></li>
+                                                <li><i class="fa fa-hand-o-right" aria-hidden="true"></i>  <a href="Contract_Manufacturing.html"> Contract Manufacturing </a></li>
+                                                <li><i class="fa fa-hand-o-right" aria-hidden="true"></i>  <a href="Plant.html"> Plant & Capacities </a></li>
+                                                <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="Packaging.html">  Packaging Unit </a></li>
+                                                <li><i class="fa fa-hand-o-right" aria-hidden="true"></i> <a href="quality.html">  QA - QC </a></li>
+                                            </ul>
+                                
+                                            <!-- Image for desktop view -->
+                                            <div class="dropdown-image">
+                                                <img style="height: 200px; width: 200px;" src="img/menu3.jpg" alt="About Us Image" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Gallery.html"> Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Careers.html"> Careers</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Contact.html"> Contact Us </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+
+
+            </div>
+        </div>
+    </header>
 
 
     <section class="breadcrumbs">
@@ -10588,7 +10776,7 @@ Chhani Canal Road, Vadodara -390002, Gujarat India.
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3">
-                                <div class="ftr-follow">
+                                <!-- <div class="ftr-follow">
                                     <div class="follow-text">
                                         Follow Us:
                                     </div>
@@ -10598,7 +10786,7 @@ Chhani Canal Road, Vadodara -390002, Gujarat India.
                                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-md-6 text-center">
                                 &nbsp;
